@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/belitre/gotpl/commands"
+	"github.com/Broadcom/gotpl-titans/commands"
 )
 
 func main() {

@@ -18,13 +18,13 @@ tidy:
 
 .PHONY: build
 build: tidy
-	GOBIN=$(BINDIR) $(GO) install -ldflags '$(LDFLAGS)' github.com/belitre/gotpl/...
+	GOBIN=$(BINDIR) $(GO) install -ldflags '$(LDFLAGS)' github.com/Broadcom/gotpl-titans/...
 
 # usage: make clean build-cross dist VERSION=v0.2-alpha
 .PHONY: build-cross
 build-cross: LDFLAGS += -extldflags "-static"
 build-cross:
-	CGO_ENABLED=0 gox -parallel=3 -output="_dist/{{.OS}}-{{.Arch}}/{{.Dir}}" -osarch='$(TARGETS)' -ldflags '$(LDFLAGS)' github.com/belitre/gotpl
+	CGO_ENABLED=0 gox -parallel=3 -output="_dist/{{.OS}}-{{.Arch}}/{{.Dir}}" -osarch='$(TARGETS)' -ldflags '$(LDFLAGS)' github.com/Broadcom/gotpl-titans
 
 .PHONY: dist
 dist:
