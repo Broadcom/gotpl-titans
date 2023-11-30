@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/belitre/gotpl/commands/options"
-	"github.com/belitre/gotpl/tpl"
+	"github.com/Broadcom/gotpl-titans/commands/options"
+	"github.com/Broadcom/gotpl-titans/tpl"
 	"github.com/spf13/cobra"
 )
 

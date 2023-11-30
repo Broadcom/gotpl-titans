@@ -10,8 +10,8 @@ import (
 	"strings"
 	"text/template"
 
+	"github.com/Broadcom/gotpl-titans/commands/options"
 	"github.com/Broadcom/sprig"
-	"github.com/belitre/gotpl/commands/options"
 	"github.com/ghodss/yaml"
 	"github.com/otiai10/copy"
 	"k8s.io/helm/pkg/chartutil"
