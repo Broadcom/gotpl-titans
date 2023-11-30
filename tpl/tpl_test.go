@@ -5,7 +5,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/belitre/gotpl/commands/options"
+	"github.com/Broadcom/gotpl-titans/commands/options"
 	"github.com/stretchr/testify/assert"
 )
 
