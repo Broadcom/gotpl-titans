@@ -3,7 +3,7 @@ module github.com/Broadcom/gotpl-titans
 go 1.13
 
 require (
-	github.com/Broadcom/sprig v0.0.0-20231130070859-911ac6946898
+	github.com/Broadcom/sprig v0.0.0-20231201064609-908436cae033
 	github.com/Masterminds/semver v1.5.0 // indirect
 	github.com/cyphar/filepath-securejoin v0.2.4 // indirect
 	github.com/ghodss/yaml v1.0.0
