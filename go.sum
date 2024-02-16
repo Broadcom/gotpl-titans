@@ -39,8 +39,8 @@ cloud.google.com/go/storage v1.10.0/go.mod h1:FLPqc6j+Ki4BU591ie1oL6qBQGu2Bl/tZ9
 dmitri.shuralyov.com/gpu/mtl v0.0.0-20190408044501-666a987793e9/go.mod h1:H6x//7gZCb22OMCxBHrMx7a5I7Hp++hsVxbQ4BYO7hU=
 github.com/Broadcom/goregen v0.0.0-20231010211337-3eca76217ae8 h1:ZeQQMNloT7es1et7SCdrYPOmTcG+kp1FuEda5+0G0Uw=
 github.com/Broadcom/goregen v0.0.0-20231010211337-3eca76217ae8/go.mod h1:Eth6Ijai9+NpSVRe32WeWF2Zdg98ytYLMn4vBGJXezo=
-github.com/Broadcom/sprig v0.0.0-20240215080536-38b897467d77 h1:IRoQLMXOff0jqLkVzLU+RQfhwTVDQkx7CUwUY9ema20=
-github.com/Broadcom/sprig v0.0.0-20240215080536-38b897467d77/go.mod h1:msDj0RqHs5lycK0ChiC/JBWgbP8VFogVaGJhOG3QZNI=
+github.com/Broadcom/sprig v0.0.0-20240216180839-aadb3378ccd8 h1:ct83qSyNoLRFngM1qYMveItrKP1EEKub89QixS8eVWM=
+github.com/Broadcom/sprig v0.0.0-20240216180839-aadb3378ccd8/go.mod h1:msDj0RqHs5lycK0ChiC/JBWgbP8VFogVaGJhOG3QZNI=
 github.com/BurntSushi/toml v0.3.1 h1:WXkYYl6Yr3qBf1K79EBnL4mak0OimBfB0XUf9Vl28OQ=
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
 github.com/BurntSushi/xgb v0.0.0-20160522181843-27f122750802/go.mod h1:IVnqGOEym/WlBOVXweHU+Q+/VP0lqqI8lqeDx9IjBqo=
