@@ -7,11 +7,11 @@ opt1=$1
 currentPath=`pwd`
 appname="gotpl"
 imagename="ubi-podman-titan"
-ver="4.8.2"
+ver="4.8.3"
 
 function buildBinaries {
     for GOOS in darwin linux; do
-        for GOARCH in amd64; do
+        for GOARCH in amd64 arm64; do
             mkdir -p bin/$GOOS-$GOARCH
             # CGO_ENABLED=0 is required for
             # https://stackoverflow.com/questions/34729748/installed-go-binary-not-found-in-path-on-alpine-linux-docker
