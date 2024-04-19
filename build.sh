@@ -38,12 +38,12 @@ function loginDocker {
 
 function buildDocker {
   loginDocker
-  docker build -t sbo-sps-docker-release-local.usw1.packages.broadcom.com/saas-devops/redhat/ubi/$imagename:$ver .
+  docker build -t sbo-sps-docker-release-local.usw1.packages.broadcom.com/saas-devops/redhat/ubi/$imagename:$ver . --platform linux/amd64
   if [ "$opt1" == "--deploy" ]
   then
     docker push sbo-sps-docker-release-local.usw1.packages.broadcom.com/saas-devops/redhat/ubi/$imagename:$ver
-    docker tag sbo-sps-docker-release-local.usw1.packages.broadcom.com/saas-devops/redhat/ubi/$imagename:$ver gcr.io/saas-dev-sed-sharedicd-gke/gkesharedicd/saas-devops/redhat/ubi/$imagename:$ver
-    docker push gcr.io/saas-dev-sed-sharedicd-gke/gkesharedicd/saas-devops/redhat/ubi/$imagename:$ver
+    # docker tag sbo-sps-docker-release-local.usw1.packages.broadcom.com/saas-devops/redhat/ubi/$imagename:$ver gcr.io/saas-dev-sed-sharedicd-gke/gkesharedicd/saas-devops/redhat/ubi/$imagename:$ver
+    # docker push gcr.io/saas-dev-sed-sharedicd-gke/gkesharedicd/saas-devops/redhat/ubi/$imagename:$ver
   fi
 }
 
