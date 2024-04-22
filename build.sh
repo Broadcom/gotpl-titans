@@ -7,11 +7,11 @@ opt1=$1
 currentPath=`pwd`
 appname="gotpl"
 imagename="ubi-podman-titan"
-ver="4.8.2"
+ver="4.8.3"
 
 function buildBinaries {
     for GOOS in darwin linux; do
-        for GOARCH in amd64; do
+        for GOARCH in amd64 arm64; do
             mkdir -p bin/$GOOS-$GOARCH
             # CGO_ENABLED=0 is required for
             # https://stackoverflow.com/questions/34729748/installed-go-binary-not-found-in-path-on-alpine-linux-docker
@@ -38,12 +38,12 @@ function loginDocker {
 
 function buildDocker {
   loginDocker
-  docker build -t sbo-sps-docker-release-local.usw1.packages.broadcom.com/saas-devops/redhat/ubi/$imagename:$ver .
+  docker build -t sbo-sps-docker-release-local.usw1.packages.broadcom.com/saas-devops/redhat/ubi/$imagename:$ver . --platform linux/amd64
   if [ "$opt1" == "--deploy" ]
   then
     docker push sbo-sps-docker-release-local.usw1.packages.broadcom.com/saas-devops/redhat/ubi/$imagename:$ver
-    docker tag sbo-sps-docker-release-local.usw1.packages.broadcom.com/saas-devops/redhat/ubi/$imagename:$ver gcr.io/saas-dev-sed-sharedicd-gke/gkesharedicd/saas-devops/redhat/ubi/$imagename:$ver
-    docker push gcr.io/saas-dev-sed-sharedicd-gke/gkesharedicd/saas-devops/redhat/ubi/$imagename:$ver
+    # docker tag sbo-sps-docker-release-local.usw1.packages.broadcom.com/saas-devops/redhat/ubi/$imagename:$ver gcr.io/saas-dev-sed-sharedicd-gke/gkesharedicd/saas-devops/redhat/ubi/$imagename:$ver
+    # docker push gcr.io/saas-dev-sed-sharedicd-gke/gkesharedicd/saas-devops/redhat/ubi/$imagename:$ver
   fi
 }
 
