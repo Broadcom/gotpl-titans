@@ -7,7 +7,7 @@ opt1=$1
 currentPath=`pwd`
 appname="gotpl"
 imagename="ubi-podman-titan"
-ver="4.8.3"
+ver="4.8.4"
 
 function buildBinaries {
     for GOOS in darwin linux; do
