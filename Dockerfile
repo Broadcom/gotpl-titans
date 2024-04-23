@@ -11,8 +11,6 @@ echo buildah:10000:65536 > /etc/subuid; \
 echo buildah:10000:65536 > /etc/subgid;
 COPY --chown=buildah:buildah ../../bin/linux-amd64/gotpl /usr/bin/gotpl
 
-COPY --chown=buildah:buildah ./titan_schemas /home/buildah/
-
 COPY podman-containers.conf /home/buildah/.config/containers/containers.conf
 
 RUN chown -R buildah:buildah /home/buildah
